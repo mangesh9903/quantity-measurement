@@ -1,13 +1,19 @@
 package com.bridgelabz;
 
-import java.util.Objects;
-
+/**
+ * @author Mangesh
+ * @date 9-May-2022
+ */
 public class Feet {
 
-    private final double value;
+    private double value;
 
     public Feet(double value) {
         this.value = value;
+    }
+
+    public Feet() {
+
     }
 
     @Override

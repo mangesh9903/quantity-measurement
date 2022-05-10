@@ -40,4 +40,20 @@ public class QuanityTest {
         Feet feet2 = new Feet(0.0);
         Assert.assertNotSame(feet1, feet2);
     }
+
+    /**
+     * TC 1.4 Check Equality.
+     */
+    @Test
+    public void givenSameTypeOfObject_shouldReturnEqual() {
+        Feet feet = new Feet();
+        Assert.assertEquals(feet, feet);
+    }
+
+    @Test
+    public void givenDifferentTypeOfObject_shouldReturnNotEqual() {
+        Feet feet = new Feet();
+        Inch inch = new Inch();
+        Assert.assertNotEquals(feet, inch);
+    }
 }
