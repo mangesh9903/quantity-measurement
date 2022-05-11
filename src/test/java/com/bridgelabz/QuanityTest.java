@@ -76,4 +76,25 @@ public class QuanityTest {
         Inch inch2 = null;
         Assert.assertNotSame(inch1, inch2);
     }
+
+    /**
+     *  TC 1.9 Reference Check.
+     */
+    @Test
+    public void givenInchAndInchFromSameRef_whenEqual_shouldReturnTrue(){
+        Inch inch = new Inch(0);
+        boolean result = inch == inch;
+        Assert.assertTrue(result);
+    }
+
+    /**
+     *  TC 1.9 Reference Check With Different Values.
+     */
+    @Test
+    public void givenInchAndInchWithDiffSameRef_whenNotEqual_shouldReturnFalse(){
+        Inch inch1 = new Inch(0);
+        Inch inch2 = new Inch(1);
+        boolean result = inch1 == inch2;
+        Assert.assertFalse(result);
+    }
 }
