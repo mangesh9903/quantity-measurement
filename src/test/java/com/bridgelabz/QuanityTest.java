@@ -97,4 +97,14 @@ public class QuanityTest {
         boolean result = inch1 == inch2;
         Assert.assertFalse(result);
     }
+
+    /**
+     *  TC 1.10 Inch Type Check
+     */
+    @Test
+    public void given0InchAnd0InchFromDifferentType_shouldReturnNotEqual(){
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(0);
+        Assert.assertNotSame(inch1,inch2);
+    }
 }
