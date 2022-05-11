@@ -58,12 +58,22 @@ public class QuanityTest {
     }
 
     /**
-     *  TC 1.7 Different Inch Value
+     * TC 1.7 Different Inch Value
      */
     @Test
-    public void given0InchAnd1Inch_shouldReturnNotEqual(){
+    public void given0InchAnd1Inch_shouldReturnNotEqual() {
         Inch inch1 = new Inch(0.0);
         Inch inch2 = new Inch(1.0);
-        Assert.assertNotEquals(inch1,inch2);
+        Assert.assertNotEquals(inch1, inch2);
+    }
+
+    /**
+     * TC 1.8 Inch Null Check
+     */
+    @Test
+    public void given0InchAndNullInch_shouldReturnNotEqual() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = null;
+        Assert.assertNotSame(inch1, inch2);
     }
 }
