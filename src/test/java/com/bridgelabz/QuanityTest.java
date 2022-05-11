@@ -117,4 +117,14 @@ public class QuanityTest {
         Inch inch2 = new Inch(0.0);
         Assert.assertEquals(inch1, inch2);
     }
+
+    /**
+     * TC 1.12 Inch Value Check for Different Values.
+     */
+    @Test
+    public void given0InchAnd1Inch_diffValue_shouldReturnNotEqual(){
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(1.0);
+        Assert.assertNotEquals(inch1, inch2);
+    }
 }
