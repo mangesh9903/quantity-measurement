@@ -78,20 +78,20 @@ public class QuanityTest {
     }
 
     /**
-     *  TC 1.9 Reference Check.
+     * TC 1.9 Reference Check.
      */
     @Test
-    public void givenInchAndInchFromSameRef_whenEqual_shouldReturnTrue(){
+    public void givenInchAndInchFromSameRef_whenEqual_shouldReturnTrue() {
         Inch inch = new Inch(0);
         boolean result = inch == inch;
         Assert.assertTrue(result);
     }
 
     /**
-     *  TC 1.9 Reference Check With Different Values.
+     * TC 1.9 Reference Check With Different Values.
      */
     @Test
-    public void givenInchAndInchWithDiffSameRef_whenNotEqual_shouldReturnFalse(){
+    public void givenInchAndInchWithDiffSameRef_whenNotEqual_shouldReturnFalse() {
         Inch inch1 = new Inch(0);
         Inch inch2 = new Inch(1);
         boolean result = inch1 == inch2;
@@ -99,12 +99,22 @@ public class QuanityTest {
     }
 
     /**
-     *  TC 1.10 Inch Type Check
+     * TC 1.10 Inch Type Check
      */
     @Test
-    public void given0InchAnd0InchFromDifferentType_shouldReturnNotEqual(){
+    public void given0InchAnd0InchFromDifferentType_shouldReturnNotEqual() {
         Inch inch1 = new Inch(0.0);
         Inch inch2 = new Inch(0);
-        Assert.assertNotSame(inch1,inch2);
+        Assert.assertNotSame(inch1, inch2);
+    }
+
+    /**
+     * TC 1.11 Inch Value Check for Equality
+     */
+    @Test
+    public void given0InchAnd0Inch_sameValue_shouldReturnEqual() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(0.0);
+        Assert.assertEquals(inch1, inch2);
     }
 }
